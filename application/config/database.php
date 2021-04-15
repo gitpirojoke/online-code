@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'dsn'	=> 'mysql:host=mysql;dbname=onlinecode; ',
+	'hostname' => 'mysql',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'onlinecode',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
