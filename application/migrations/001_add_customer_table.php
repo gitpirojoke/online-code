@@ -23,6 +23,7 @@ class Migration_Add_customer_table extends CI_Migration {
 			'middle_name' => array(
 				'type' => 'VARCHAR',
 				'constraint' => 25,
+				'null' => TRUE,
 			),
 			'city' => array(
 				'type' => 'VARCHAR',
@@ -39,11 +40,13 @@ class Migration_Add_customer_table extends CI_Migration {
 			'apartment' => array(
 				'type' => 'VARCHAR',
 				'constraint' => 5,
+				'null' => TRUE,
 			),
 			'broom_counter' => array(
 				'type' => 'INT',
 				'unsigned' => TRUE,
 				'constraint' => 5,
+				'null' => TRUE,
 			),
 		));
 		$this->dbforge->add_key('id', TRUE);
