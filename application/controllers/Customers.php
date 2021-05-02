@@ -11,7 +11,7 @@ class Customers extends CI_Controller {
 
 	public function index()
 	{
-		$data['customers'] = $this->customer_model->get_all();
+		$data['customers'] = $this->customer_model->get_customer();
 		$data['title'] = 'Customer list';
 
 		$this->load->view('templates/header', $data);
@@ -19,19 +19,19 @@ class Customers extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-/*	public function view($slug = NULL)
+	public function view($id = NULL)
 	{
-		$data['news_item'] = $this->news_model->get_news($slug);
+		$data['customer_item'] = $this->customer_model-->get_customer($id);
 
-		if (empty($data['news_item']))
+		if (empty($data['customer_item']))
 		{
 			show_404();
 		}
 
-		$data['title'] = $data['news_item']['title'];
+		$data['title'] = $data['customer_item']['title'];
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('news/view', $data);
+		$this->load->view('customers/view', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -40,22 +40,25 @@ class Customers extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Create a news item';
+		$data['title'] = 'Create customer';
 
-		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_rules('text', 'Text', 'required');
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('surname', 'Surname', 'required');
+        $this->form_validation->set_rules('street', 'Street', 'required');
+        $this->form_validation->set_rules('building', 'Building', 'required');
+        $this->form_validation->set_rules('broom_counter', 'Broom counter', 'required');
 
 		if ($this->form_validation->run() === FALSE)
 		{
 			$this->load->view('templates/header', $data);
-			$this->load->view('news/create');
+			$this->load->view('customers/create');
 			$this->load->view('templates/footer');
 
 		}
 		else
 		{
-			$this->news_model->set_news();
-			redirect('news/', 'refresh');
+			$this->customer_model->set_customers();
+			redirect('customers/', 'refresh');
 		}
-	}*/
+	}
 }
