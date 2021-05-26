@@ -44,9 +44,9 @@ class Customers extends CI_Controller {
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('surname', 'Surname', 'required');
-        $this->form_validation->set_rules('street', 'Street', 'required');
-        $this->form_validation->set_rules('building', 'Building', 'required');
-        $this->form_validation->set_rules('broom_counter', 'Broom counter', 'required');
+		$this->form_validation->set_rules('street', 'Street', 'required');
+		$this->form_validation->set_rules('building', 'Building', 'required');
+		$this->form_validation->set_rules('broom_counter', 'Broom counter', 'required');
 
 		if ($this->form_validation->run() === FALSE)
 		{
