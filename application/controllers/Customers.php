@@ -28,7 +28,7 @@ class Customers extends CI_Controller {
 			show_404();
 		}
 
-		$data['title'] = $data['customer_item']['title'];
+		$data['title'] = "view";
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('customers/view', $data);
