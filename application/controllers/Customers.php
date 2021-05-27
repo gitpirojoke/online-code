@@ -21,7 +21,7 @@ class Customers extends CI_Controller {
 
 	public function view($id = NULL)
 	{
-		$data['customer_item'] = $this->customer_model-->get_customer($id);
+		$data['customer_item'] = $this->customer_model->get_customer($id);
 
 		if (empty($data['customer_item']))
 		{
