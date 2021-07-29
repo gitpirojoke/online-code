@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['customers'] = 'customers';
+$route['customers/create'] = 'customers/create';
 $route['customers/(:any)'] = 'customers/view/$1';
 $route['migrate/index'] = 'migrate/index';
 $route['news/create'] = 'news/create';
