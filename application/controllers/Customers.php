@@ -12,7 +12,7 @@ class Customers extends CI_Controller {
 	public function index()
 	{
 		$data['customers'] = $this->customer_model->get_customer();
-		$data['title'] = 'Customer list';
+		$data['title'] = 'Список клиентов';
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('customers/index', $data);
@@ -40,7 +40,7 @@ class Customers extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Create customer';
+		$data['title'] = 'Создать запись клиента';
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('surname', 'Surname', 'required');
