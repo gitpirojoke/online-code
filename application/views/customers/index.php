@@ -35,12 +35,8 @@
             <td><?php echo $customers_item['surname']; ?></td>
             <td>
                 <form method="DELETE" action="<?php echo base_url('customers/delete/'.$customers_item['id']);?>">
-                    <a class="btn btn-info" href="<?php echo base_url('customers/view/'.$customers_item['id']); ?>">
-                        <i class="fa fa-eye"></i>
-                    </a>
-                    <a class="btn btn-primary" href="<?php echo base_url('customers/edit/'.$customers_item['id']); ?>">
-                        <i class="fa fa-pencil-square-o"></i>
-                    </a>
+                    <a class="btn btn-info" href="<?php echo base_url('customers/view/'.$customers_item['id']); ?>"><i class="fa fa-eye"></i></a>
+                    <a class="btn btn-primary" href="<?php echo base_url('customers/edit/'.$customers_item['id']); ?>"><i class="fa fa-pencil-square-o"></i></a>
                     <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
                 </form>
             </td>

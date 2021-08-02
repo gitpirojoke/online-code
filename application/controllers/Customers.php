@@ -28,7 +28,7 @@ class Customers extends CI_Controller {
 			show_404();
 		}
 
-		$data['title'] = "view";
+		$data['title'] = 'Карточка клиента';
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('customers/view', $data);
