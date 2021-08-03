@@ -27,7 +27,7 @@ class Customer_model extends CI_Model {
             'name' => $this->input->post('name'),
             'surname' => $this->input->post('surname'),
             'middle_name' => $this->input->post('middle_name'),
-            'city' => $this->input->post('city'),
+            'city' => 'Новочеркасск',
             'street' => $this->input->post('street'),
             'building' => $this->input->post('building'),
             'apartment' => $this->input->post('apartment'),

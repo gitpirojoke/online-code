@@ -1,31 +1,64 @@
-<h2><?php echo $title; ?></h2>
-
 <?php echo validation_errors(); ?>
 
 <?php echo form_open('customers/create'); ?>
-<div class="container h-100">
-	<div class="form-group">
-		<div>
-			<label for="name">Имя</label>
-			<textarea class="form-control" id="name" name="name" rows="1"></textarea>
-		</div>
-	</div>
-	<label for="surname">Фамилия</label>
-	<input type="text" name="surname" /><br />
-	<label for="middle_name"">Отчество</label>
-	<input type="text" name="middle_name" /><br />
-	<label for="city">Город</label>
-	<label>
-		<input type="text" name="city" />
-	</label><br />
-	<label for="street">Улица</label>
-	<input type="text" name="street" /><br />
-	<label for="building">Дом</label>
-	<input type="text" name="building" /><br />
-	<label for="apartment">Квартира</label>
-	<input type="text" name="apartment" /><br />
-	<label for="broom_counter">Количесво заказанных веников</label>
-	<input type="number" name="broom_counter" /><br />
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <label for="name">Имя</label>
+            <input type="text"
+                   name="name"
+                   id="name"
+                   class="form-control"
+                   placeholder="Имя"
+                   value="<?php echo set_value('name'); ?>"
+            />
+        </div>
+
+        <div class="col">
+            <label for="surname">Фамилия</label>
+            <input type="text"
+                   name="surname"
+                   id="surname"
+                   class="form-control"
+                   placeholder="Фамилия"
+                   value="<?php echo set_value('surname'); ?>"
+            />
+        </div>
+
+        <div class="col">
+            <label for="middle_name">Отчество</label>
+            <input type="text"
+                   name="middle_name"
+                   id="middle_name"
+                   class="form-control"
+                   placeholder="Отчество"
+                   value="<?php echo set_value('middle_name'); ?>"
+            />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="street">Улица</label><br />
+            <input type="text" name="street" id="street" value="<?php echo set_value('street'); ?>"/>
+        </div>
+
+        <div class="col">
+            <label for="building">Дом</label><br />
+            <input type="text" name="building" id="building" value="<?php echo set_value('building'); ?>"/>
+        </div>
+
+        <div class="col">
+            <label for="apartment">Квартира</label><br />
+            <input type="text" name="apartment" id="apartment"  value="<?php echo set_value('apartment'); ?>"/>
+        </div>
+
+    </div>
+
+
+	<label for="broom_counter">Количесво заказанных веников</label><br />
+	<input type="number" name="broom_counter" id="broom_counter" value="<?php echo set_value('broom_counter'); ?>"/><br />
 
 	<input type="submit" name="submit" value="Create customer" />
 </div>

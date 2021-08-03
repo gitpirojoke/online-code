@@ -28,7 +28,7 @@ class Customers extends CI_Controller {
 			show_404();
 		}
 
-		$data['title'] = 'Карточка клиента';
+		$data['title'] = "Карточка клиента";
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('customers/view', $data);
@@ -40,13 +40,13 @@ class Customers extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Создать запись клиента';
+		$data['title'] = 'добавить клиента';
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('surname', 'Surname', 'required');
 		$this->form_validation->set_rules('street', 'Street', 'required');
 		$this->form_validation->set_rules('building', 'Building', 'required');
-		$this->form_validation->set_rules('broom_counter', 'Broom counter', 'required');
+		$this->form_validation->set_rules('broom_counter', 'Количесво заказанных веников', 'required|is_natural_no_zero');
 
 		if ($this->form_validation->run() === FALSE)
 		{
