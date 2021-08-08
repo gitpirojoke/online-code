@@ -37,4 +37,9 @@ class Customer_model extends CI_Model {
         return $this->db->insert('customer', $data);
     }
 
+    public function delete_customers($id)
+    {
+        return $this->db->delete('customer', array('id' => $id));
+    }
+
 }

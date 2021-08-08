@@ -40,7 +40,7 @@ class Customers extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'добавить клиента';
+		$data['title'] = 'Добавить клиента';
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('surname', 'Surname', 'required');
@@ -61,4 +61,10 @@ class Customers extends CI_Controller {
 			redirect('customers/', 'refresh');
 		}
 	}
+
+    public function delete($id)
+    {
+        $this->customer_model->delete_customers($id);
+        redirect('customers/', 'refresh');
+    }
 }

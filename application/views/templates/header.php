@@ -42,7 +42,7 @@
         <ul class="navbar-nav ml-auto">
 
           <li class="nav-item active">
-            <a class="nav-link" href="#">Главная
+            <a class="nav-link" href="<?php echo base_url();?>">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -61,4 +61,4 @@
 </div>
 	<body>
         <div class="container">
-            <h1><?php echo $title ?></h1>
+<!--            <h1>--><?php //echo $title ?><!--</h1>-->
