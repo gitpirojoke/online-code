@@ -25,6 +25,10 @@ class Migration_Add_customer_table extends CI_Migration {
 				'constraint' => 25,
 				'null' => TRUE,
 			),
+
+			'birth_date' => array(
+				'type' => 'DATE',
+			),
 			'city' => array(
 				'type' => 'VARCHAR',
 				'constraint' => 100,

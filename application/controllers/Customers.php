@@ -44,6 +44,7 @@ class Customers extends CI_Controller {
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('surname', 'Surname', 'required');
+		$this->form_validation->set_rules('birth_date', 'Дата рождения', 'required');
 		$this->form_validation->set_rules('street', 'Street', 'required');
 		$this->form_validation->set_rules('building', 'Building', 'required');
 		$this->form_validation->set_rules('broom_counter', 'Количесво заказанных веников', 'required|is_natural_no_zero');

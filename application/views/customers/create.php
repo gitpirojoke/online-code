@@ -40,7 +40,19 @@
         </div>
     </div>
 
-    <div class="row ">
+	<div class="row">
+		<div class="col">
+			<label for="birth_date">дата роджения</label><br/>
+			<input type="date"
+				   name="birth_date"
+				   id="birth_date"
+				   class="form-group"
+				   value="<?php echo set_value('birth_date'); ?>"
+			/>
+		</div>
+	</div>
+
+	<div class="row ">
         <div class="col">
             <label for="street">Улица</label>
             <input type="text"
@@ -88,6 +100,7 @@
             />
         </div>
     </div>
+
 
     <div class="row">
         <div class="col">
