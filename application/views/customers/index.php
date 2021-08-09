@@ -14,7 +14,7 @@
     <tr>
         <th>Имя</th>
         <th>Фамилия</th>
-        <th width="170px"></th>
+        <th width="150px"></th>
     </tr>
     </thead>
     <tbody>
