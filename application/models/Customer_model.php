@@ -24,12 +24,12 @@ class Customer_model extends CI_Model {
         $this->load->helper('url');
 
         $data = array(
-            'name' => $this->input->post('name'),
-            'surname' => $this->input->post('surname'),
-            'middle_name' => $this->input->post('middle_name'),
+            'name' => mb_convert_case(mb_strtolower($this->input->post('name'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+            'surname' => mb_convert_case(mb_strtolower($this->input->post('surname'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+            'middle_name' => mb_convert_case(mb_strtolower($this->input->post('middle_name'),'utf-8'),MB_CASE_TITLE,'utf-8'),
 			'birth_date' => $this->input->post('birth_date'),
             'city' => 'Новочеркасск',
-            'street' => $this->input->post('street'),
+            'street' => mb_convert_case(mb_strtolower($this->input->post('street'),'utf-8'),MB_CASE_TITLE,'utf-8'),
             'building' => $this->input->post('building'),
             'apartment' => $this->input->post('apartment'),
             'broom_counter' => $this->input->post('broom_counter')

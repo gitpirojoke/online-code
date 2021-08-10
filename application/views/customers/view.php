@@ -14,11 +14,17 @@
 
 <div class="row">
 	<div class="col">
-		<?php foreach ($customer_item as $value): ?>
 
-			<p><?php echo $value ;?></p>
+		<h4><?php echo $customer_item['surname'] . ' ' . $customer_item['name'] . ' ' . $customer_item['middle_name'];?></h4>
+		<p>Дата рождения:<br/>
+			<?php echo date("d.m.Y",strtotime($customer_item['birth_date']));?>
+		</p>
 
-		<?php endforeach; ?>
+		<p>Адрес:<br/>
+			<?php echo $customer_item['city'] . ', ' . $customer_item['street'] . ', ' . $customer_item['building'] . ', ' . $customer_item['apartment'];?>
+		</p>Количество веников:<br/>
+		<?php echo $customer_item['broom_counter'];?>
+
 	</div>
 	<div class="col" id="map" style="width: 400px;height: 400px">
 
@@ -38,8 +44,7 @@
 		});
 
 		var marker = new ymaps.Placemark([56.039017, 92.894853], {
-			hintContent: 'Расположение',
-			balloonContent: 'Это наша организация'
+			hintContent: '<?php echo $customer_item['surname'] . ' ' . $customer_item['name'];?>'
 		});
 		myMap.geoObjects.add(marker);
 	}
