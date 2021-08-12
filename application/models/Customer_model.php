@@ -38,6 +38,27 @@ class Customer_model extends CI_Model {
         return $this->db->insert('customer', $data);
     }
 
+    public function update_customer($id)
+	{
+		$this->load->helper('url');
+
+		$data = array(
+			'name' => mb_convert_case(mb_strtolower($this->input->post('name'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+			'surname' => mb_convert_case(mb_strtolower($this->input->post('surname'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+			'middle_name' => mb_convert_case(mb_strtolower($this->input->post('middle_name'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+			'birth_date' => $this->input->post('birth_date'),
+			'city' => 'Новочеркасск',
+			'street' => mb_convert_case(mb_strtolower($this->input->post('street'),'utf-8'),MB_CASE_TITLE,'utf-8'),
+			'building' => $this->input->post('building'),
+			'apartment' => $this->input->post('apartment'),
+			'broom_counter' => $this->input->post('broom_counter')
+		);
+
+		return $this->db->update('customer', $data,array('id' => $id));
+
+
+	}
+
     public function delete_customers($id)
     {
         return $this->db->delete('customer', array('id' => $id));
