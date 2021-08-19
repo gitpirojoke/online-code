@@ -1,14 +1,15 @@
 <html>
 	<head>
 		<title>CodeIgniter Tutorial</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor/assets/css/bootstrap.css');?>">
+<!--        <link rel="stylesheet" type="text/css" href="--><?php //echo base_url('vendor/assets/css/bootstrap.css');?><!--">-->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor/assets/myCss.css');?>">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!--        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
